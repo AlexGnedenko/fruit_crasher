@@ -13,5 +13,6 @@ class MoneyManager(object):
         self.balance += 1/25
 
     def draw(self, surface):
-        self.UI_balance.set_content(self.balance)
+        balance_text = "Баланс: " + str(int(self.balance))
+        self.UI_balance.set_content(balance_text)
         self.UI_balance.draw(surface)
