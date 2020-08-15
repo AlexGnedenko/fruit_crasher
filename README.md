@@ -1,2 +1,2 @@
-# fruit_crasher
+# Fruit Crasher
 Using Dia for creating class UML diagram.
