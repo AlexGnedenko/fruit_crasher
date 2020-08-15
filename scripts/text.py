@@ -17,13 +17,10 @@ class Text(object):
         self.color = (settings["color"][0], settings["color"][1], settings["color"][2])
 
     def draw(self, surface):
-        # font = pygame.font.Font(pygame.font.match_font('timesnewroman'), self.size[1])
-        font = pygame.font.Font(pygame.font.match_font('timesnewroman'), 36)
-        text = font.render(self.content, 1, self.color)
+        font = pygame.font.Font(pygame.font.match_font('timesnewroman'), self.size[1])
+        text = font.render(str(int(self.content)), 1, self.color)
         place = text.get_rect(center=self.position)
         surface.blit(text, place)
-
-        print(str(self.content))
 
     def set_content(self, new_content):
         self.content = new_content

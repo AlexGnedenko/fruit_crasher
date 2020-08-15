@@ -17,5 +17,4 @@ class GameObjects(object):
     def draw(self, surface):
         self.gui.draw(surface)
         self.money_manager.draw(surface)
-        self.gui.draw(surface)
         pygame.display.update()
