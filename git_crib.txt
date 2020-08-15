@@ -1,0 +1,10 @@
+https://github.com/AlexGnedenko/fruit_crasher.git
+
+git config --global user.name "alexgnedenko@gmail.com"
+git config --global user.email "alexgnedenko@gmail.com"
+
+git add .
+
+git commit
+
+git push
