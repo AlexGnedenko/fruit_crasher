@@ -1,2 +1,2 @@
 # fruit_crasher
-fgdhsrhtrrthwreh
+Using Dia for creating class UML diagram.
