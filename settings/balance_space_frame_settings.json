@@ -1,6 +1,9 @@
 {
-  "size":[200, 640],
+  "size":[640, 200],
   "position":[960, 100],
-  "angle": 90,
-  "picture_path": "../images/frame.png"
+  "thickness": 50,
+  "top_picture_path": "../images/top_frame.png",
+  "bottom_picture_path": "../images/bottom_frame.png",
+  "left_picture_path": "../images/left_frame.png",
+  "right_picture_path": "../images/right_frame.png"
 }
