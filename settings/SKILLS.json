@@ -1,3 +1,4 @@
 {
-  "rotation_speed":1
+  "rotation_speed":5,
+  "n_blade": 4
 }
