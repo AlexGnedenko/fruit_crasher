@@ -9,8 +9,8 @@ class MoneyManager(object):
         self.balance = balance
         self.UI_balance = Text(str(self.balance), self.UI_balance_settings_file)
 
-    def update(self, user_activity):
-        self.balance += 1/25
+    def update(self, income, user_activity):
+        self.balance += income
 
     def draw(self, surface):
         balance_text = "Баланс: " + str(int(self.balance))
