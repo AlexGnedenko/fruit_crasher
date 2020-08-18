@@ -1,6 +1,6 @@
 {
-  "size":[640, 210],
-  "position":[960, 105],
+  "size":[320, 170],
+  "position":[800, 295],
   "thickness": 50,
   "top_picture_path": "../images/top_frame.png",
   "bottom_picture_path": "../images/bottom_frame.png",
