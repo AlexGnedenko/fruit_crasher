@@ -45,7 +45,5 @@ class Fruit(object):
         else:
             self.is_dead = True
 
-
-
     def draw(self, surface):
         self.fruit.draw(surface)

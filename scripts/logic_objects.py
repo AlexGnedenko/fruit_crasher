@@ -1,9 +1,16 @@
 from fruit import *
+from wheel import *
 import json
 import random
 
-class Products(object):
+class LogicObjects(object):
     """docstring"""
+    UI_left_wheel_settings_file = "../settings/left_wheel_settings.json"
+    UI_right_wheel_settings_file = "../settings/right_wheel_settings.json"
+
+    UI_left_blade_settings_file = "../settings/left_blade_settings.json"
+    UI_right_blade_settings_file = "../settings/right_blade_settings.json"
+
     SKILLS_file = "../settings/SKILLS.json"
 
     def __init__(self):
@@ -13,8 +20,16 @@ class Products(object):
 
         with open(self.SKILLS_file) as f:
             skills = json.load(f)
+
         self.SKILL_generation_fruit_speed = skills["generation_fruit_speed"]
         self.SKILL_fruit_quality = skills["fruit_quality"]
+        self.SKILL_rotation_speed = skills["rotation_speed"]
+        self.SKILL_n_blade = skills["n_blade"]
+
+        self.left_wheel = Wheel(self.SKILL_rotation_speed, self.SKILL_n_blade, self.UI_left_wheel_settings_file,
+                                self.UI_left_blade_settings_file)
+        self.right_wheel = Wheel(self.SKILL_rotation_speed, self.SKILL_n_blade, self.UI_right_wheel_settings_file,
+                                 self.UI_right_blade_settings_file)
 
     def generate_new_fruit(self):
         fruit_type = random.choice(self.SKILL_fruit_quality)
@@ -39,8 +54,17 @@ class Products(object):
                 income += fruit.max_health//100
                 self.fruits.remove(fruit)
 
+        # rotating wheels
+        self.left_wheel.update(user_activity, "left")
+        self.right_wheel.update(user_activity, "right")
+
         return income
 
     def draw(self, surface):
+        # draw fruits
         for fruit in self.fruits:
             fruit.draw(surface)
+
+        # draw wheels
+        self.left_wheel.draw(surface)
+        self.right_wheel.draw(surface)
