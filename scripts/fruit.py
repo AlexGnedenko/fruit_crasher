@@ -39,7 +39,7 @@ class Fruit(object):
             self.fruit.position = (self.fruit.position[0], self.fruit.position[1] + 5)
 
             # rotating fruits
-            self.fruit.angle += 2
+            self.fruit.angle += random.randint(2, 10)
             if self.fruit.angle > 360:
                 self.fruit.angle -= 360
         else:
