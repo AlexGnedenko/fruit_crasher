@@ -35,9 +35,17 @@ class Fruit(object):
 
     def update(self, user_activity):
         if self.fruit.position[1] < 700:
+            # falling fruits
             self.fruit.position = (self.fruit.position[0], self.fruit.position[1] + 5)
+
+            # rotating fruits
+            self.fruit.angle += 2
+            if self.fruit.angle > 360:
+                self.fruit.angle -= 360
         else:
             self.is_dead = True
+
+
 
     def draw(self, surface):
         self.fruit.draw(surface)
