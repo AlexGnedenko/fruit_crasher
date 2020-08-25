@@ -1,5 +1,6 @@
 from fruit import *
 from wheel import *
+from particle import *
 import json
 import random
 
@@ -15,6 +16,7 @@ class LogicObjects(object):
 
     def __init__(self):
         """Constructor"""
+        self.particles = list()
         self.fruits = list()
         self.timer = 0
 
@@ -52,11 +54,20 @@ class LogicObjects(object):
         for fruit in self.fruits:
             if fruit.is_dead:
                 income += fruit.max_health//100
+                for i in range(10):
+                    self.particles.append(Particle(fruit.fruit.position, fruit.type))
                 self.fruits.remove(fruit)
 
         # rotating wheels
         self.left_wheel.update(user_activity, "left")
         self.right_wheel.update(user_activity, "right")
+
+        # falling particles
+        for particle in self.particles:
+            if particle.position[1]<700:
+                particle.position = (particle.position[0], particle.position[1]+random.randint(5, 7))
+            else:
+                self.particles.remove(particle)
 
         return income
 
@@ -68,3 +79,7 @@ class LogicObjects(object):
         # draw wheels
         self.left_wheel.draw(surface)
         self.right_wheel.draw(surface)
+
+        # draw particles
+        for particle in self.particles:
+            particle.draw(surface)
