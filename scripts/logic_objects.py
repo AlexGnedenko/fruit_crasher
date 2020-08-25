@@ -45,7 +45,7 @@ class LogicObjects(object):
 
         # update exist fruits
         for fruit in self.fruits:
-            fruit.update(user_activity)
+            fruit.update(user_activity, [self.left_wheel, self.right_wheel])
 
         income = 0
         # deleting downed fruit

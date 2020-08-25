@@ -14,7 +14,7 @@ def main():
     clock = pygame.time.Clock()
 
     # TO DO: load save
-    balance = 1
+    balance = 0
 
     # init
     game_objects = GameObjects(balance)

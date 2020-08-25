@@ -1,6 +1,7 @@
 {
-  "rotation_speed":10,
-  "n_blade": 6,
-  "generation_fruit_speed": 25,
-  "fruit_quality": [0, 0, 0, 0, 0, 0, 0, 0, 1, 2]
+  "rotation_speed":14,
+  "n_blade": 12,
+  "generation_fruit_speed": 1,
+  "fruit_quality": [0, 0, 0, 1, 1, 1, 2, 2, 2, 2],
+  "coefficient": 100
 }
