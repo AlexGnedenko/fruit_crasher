@@ -21,6 +21,7 @@ class GameObjects(object):
     def update_state(self, user_activity):
         income = self.logic_objects.update(user_activity)
         self.money_manager.update(income, user_activity)
+        self.gui.update(user_activity)
         self.sounds.play(user_activity)
 
     def draw(self, surface):

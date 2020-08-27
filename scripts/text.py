@@ -19,7 +19,7 @@ class Text(object):
     def draw(self, surface):
         font = pygame.font.Font(pygame.font.match_font('timesnewroman'), self.size[1])
         text = font.render(self.content, 1, self.color)
-        place = text.get_rect(center=self.position)
+        place = text.get_rect(topleft=(self.position[0] - int(self.size[0]//2) + 50, self.position[1]))
         surface.blit(text, place)
 
     def set_content(self, new_content):

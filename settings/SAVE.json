@@ -1,1 +1,1 @@
-{"balance": 11, "rotation_speed": 1, "n_blade": 1, "generation_fruit_speed": 128, "fruit_quality": [0, 0, 0, 0, 0, 0, 0, 0, 1, 2], "coefficient": 1}
+{"balance": 648, "rotation_speed": 6, "n_blade": 10, "generation_fruit_speed": 32, "fruit_quality": [0, 0, 0, 0, 1, 1, 1, 2, 2, 2], "coefficient": 2}
