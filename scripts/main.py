@@ -20,8 +20,9 @@ def main():
         skills = json.load(f)
     balance = skills["balance"]
 
-    # init
+    # init and play fon music
     game_objects = GameObjects(balance)
+    game_objects.play_music()
 
     # main program loop
     while 1:
