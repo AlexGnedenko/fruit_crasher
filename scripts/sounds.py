@@ -17,7 +17,7 @@ class Sounds(object):
             self.play_button_sound()
 
     def play_fone_music(self):
-        pygame.mixer.music.play()
+        pygame.mixer.music.play(-1)
 
     def play_button_sound(self):
         self.button_sound.play()
