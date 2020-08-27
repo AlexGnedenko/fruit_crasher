@@ -12,7 +12,7 @@ class LogicObjects(object):
     UI_left_blade_settings_file = "../settings/left_blade_settings.json"
     UI_right_blade_settings_file = "../settings/right_blade_settings.json"
 
-    SKILLS_file = "../settings/SKILLS.json"
+    SKILLS_file = "../settings/SAVE.json"
 
     def __init__(self):
         """Constructor"""

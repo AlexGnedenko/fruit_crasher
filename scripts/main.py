@@ -1,6 +1,7 @@
 import pygame
 from pygame import *
 from game_objects import *
+import json
 
 # constants
 DISPLAY_SIZE = (1280, 720)
@@ -13,8 +14,11 @@ def main():
     main_surface = pygame.display.set_mode(DISPLAY_SIZE, pygame.FULLSCREEN)
     clock = pygame.time.Clock()
 
-    # TO DO: load save
-    balance = 0
+    # load save
+    SKILLS_file = "../settings/SAVE.json"
+    with open(SKILLS_file) as f:
+        skills = json.load(f)
+    balance = skills["balance"]
 
     # init
     game_objects = GameObjects(balance)
